@@ -1,0 +1,41 @@
+/*
+ @Author: Sanjay Kumar
+ @Project: PHP MySQLi File Upload with Progress Bar Using jQuery Ajax
+ @Email: onlinewebtutorhub@gmail.com
+ @Website: https://onlinewebtutorblog.com/
+*/
+
+.progress {
+    display: none;
+    position: relative;
+    height: 25px;
+    background-color: #ddd;
+    border-radius: 15px;
+}
+
+.progress-bar {
+    background-color: green;
+    width: 0%;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.percent {
+    position: absolute;
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    top: 87%;
+    left: 50%;
+    margin-top: -9px;
+    margin-left: -20px;
+}
+
+#outputImage {
+    display: none;
+    margin-top: 10px;
+}
+
+#outputImage img {
+    max-width: 300px;
+}

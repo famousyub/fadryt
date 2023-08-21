@@ -1,0 +1,45 @@
+<div class="container">
+    <table class="seats">
+        <tr class="withLineHeight">
+            <td>
+                <button class="btn btn-primary" onclick="video.play();">Play</button>
+                <button class="btn btn-secondary" onclick="video.pause();">Pause</button>
+                <button class="btn btn-danger" onclick="video.muted = !video.muted;">Mute</button>
+            </td>
+            <td class="vertical">
+                <div class="withLineHeight">
+                    <div class="withLineHeight">
+                        <ul *ngFor="let vid of videos" class="withFlex">
+                            <li>
+                                {{vid.description}}
+                                <span>
+                                    {{vid.tagy}}
+                                </span>
+                                <p>
+                                    {{vid.tag}}
+                                </p>
+                                <button id="capture">Capture</button>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <canvas id="canvas" width="320" height="240"></canvas>
+                                        </td>
+                                        <td>
+                                            <video class="player" id="video video_box" src="{{vid.url_}}" controls height="680px" width="680px"></video>
+                                            <div id="wrap_video">
+                                                <div id="video_box">
+                                                    <div id="video_overlays"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+   
+</div>
